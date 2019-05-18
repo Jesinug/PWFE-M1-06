@@ -1,7 +1,14 @@
+* {
+	outline: dotted 1px red;
+}
+
 body {
 	font-family: "Arial";
 	font-size: 14px;
 	color: #222;
+}
+img {
+	display: block;
 }
 header {
 	background-color: #333;
@@ -38,4 +45,14 @@ nav li a {
 nav li a:hover {
 	color: #333;
 	background-color: #FFF;
+}
+#noticias-destacadas img {
+	width: 100%;
+}
+#noticias-destacadas h2 {
+	background-color: #333;
+	color: #FFF;
+	font-weight: 700;
+	padding: 20px;
+	font-size: 48px;
 }
