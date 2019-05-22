@@ -1,6 +1,6 @@
-* {
+/* {
 	outline: dotted 1px red;
-}
+}*/
 
 body {
 	font-family: "Arial";
@@ -61,11 +61,29 @@ nav li a:hover {
 
 .noticia {
 	display: flex;
-	flex-direction: row; /* row / column / row-reverse / column-reverse */
-	align-items: center; /* flex-star / center / flex-end */
-	justify-content: space-around; /* flex-start / center / flex-end / space-around */
-}
+	flex-direction: row; /* El resto de las opciones de esta propiedad de Flex: row / column / row-reverse / column-reverse */
+	align-items: center; /* El resto de las opciones de esta propiedad de Flex: flex-star / center / flex-end */
+	justify-content: space-around; /* El resto de las opciones de esta propiedad de Flex: flex-start / center / flex-end / space-around */
 
+	border-bottom: solid 1px #DDD;
+	margin: 0 20px;
+
+/* PARA hacer que las lineas (border) q siguen las cajas de cada noticia no lleguen hasta el final de la pantalla
+deberiamos aplicar un margin. Hay tres versiones. 
+La version extendida es:
+	margin-top: 0;
+	margin-bottom: 0;
+	margin- right: 20px;
+	margin-left: 20px;
+
+Una version mas simplificada es:
+	margin: 0 20px 0 20px; (as in: top/right/bottom/left, o configuracion con el sentido de las agujas del reloj)
+
+La verion todavia mas simplificada (y que es la elegida) es:
+	margin: 0 20px; (As in: ejes Y / X)
+
+*/
+}
 .noticia-img {
 	width: 30%
 }
@@ -80,7 +98,7 @@ nav li a:hover {
 .noticia-txt p {	
 	font-size: 20px; 
 }
-.noticia-txt p:nth-of-type(1) {
+.noticia-txt p:nth-of-type(1) { /* Esto es para hacer que un <p> tenga negrita pero esto no aplique para el resto de los <p> */
 	font-weight: 700;	
 }
 
@@ -88,5 +106,14 @@ nav li a:hover {
 .noticia-txt p {
 	line-height: 1.5;
 	margin-top: 15px;
-	margin-bottom: 15px;}
+	margin-bottom: 15px;
+}
+
+footer {
+	background-color: #333;
+	padding: 10px;
+	text-align: center;
+	color: #FFF;
+	font-size: 12px;
+	margin-top: 10px;
 }
