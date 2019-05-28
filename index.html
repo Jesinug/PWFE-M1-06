@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"> <!-- Para q las media query funcionen en un entorno mobiel, tenemos q usar estos dos atributos; el name y el content van a ser los atributos q tambien usaremos para posicionar nuestro producto en la red; en este caso es para hacer una regla en el mobile design con respecto a-->
 		<title>DX DeporteXtremo</title>
 		<link rel="stylesheet" href="css/reset.css">	
 		<link rel="stylesheet" href="css/style.css">	
@@ -9,6 +10,7 @@
 	<body>
 		<header>
 			<h1>DeporteXtremo</h1>
+			<button>&#9776;</button> <!-- Este codigo es similar al codigo de cpyright q hay puesto en el footer, es el codigo del menu hamburguesa --->
 			<nav>
 				<ul>
 					<li><a href="#">Futbol</a>
@@ -102,35 +104,44 @@
 
 		<table>
 			<!-- Las tablas: Son de un uso limitado; Google no indexa esa informacion, y es limitada en cuanto al disenio, pero se usa mucho para todo lo q es email mkt dado q nos permite que la informacion q mandamos (newsletters, gacetillas, etc) se vea en un layout similar en los diferentes mails en q se abra. Es muy dificil usar CSS para armado de newsletter -->
+			<!-- Aca empieza la FILA -->
+				
+				<tr>
+					<th colspan="4">3er fecha</th> <!-- Atr colspan: es decirle a la celda "sos una celda, pero tenes q medir como -en este caso- 4" -->
+					</tr>
 
 			<!-- Aca empieza la FILA -->
 				<tr>
 					<td>1</td> <!-- Aca viene la CELDA -->
-					<td>Tigre, 1pts - Patronato, 3pts</td>
+					<td><span>Tigre</span>, 1pts<br><span>Patronato</span>, 3pts <!-- La tag SPAN es como el <div> para los textos. Los aisla y nos permite agregarle estilo a ese fragmento de texto especifico -->
 					<td>2</td>
-					<td>Colon, 4pts - Estudiantes, 3pts</td>
+					<td><span>Colon</span>, 4pts<br><span>Estudiantes</span>, 3pts</td>
 				</tr>
-				
+
+			<!-- Aca empieza la FILA -->	
 				<tr>
 					<td>3</td> <!-- Aca viene la CELDA -->
-					<td>Def. y Justicia, 4pts - Union, 4pts</td>
+					<td><span>Def. y Justicia</span>, 4pts<br><span>Union</span>, 4pts</td>
 					<td>4</td>
-					<td>Argentinos Jrs., 0pts - Belgrano, 3pts</td>
+					<td><span>Argentinos Jrs.</span>, 0pts<br><span>Belgrano</span>, 3pts</td>
 				</tr>
 
+			<!-- Aca empieza la FILA -->	
 				<tr>
 					<td>5</td> <!-- Aca viene la CELDA -->
-					<td>Newells, 1pts - Olimpo, 1pts</td>
+					<td><span>Newells</span>, 1pts<br><span>Olimpo</span>, 1pts</td>
 					<td>6</td>
-					<td>San Lorenzo, 2pts - Arsenal, 0pts</td>
+					<td><span>San Lorenzo</span>, 2pts<br><span>Arsenal</span>, 0pts</td>
 				</tr>
 
+			<!-- Aca empieza la FILA -->		
 				<tr>
 					<td>7</td> <!-- Aca viene la CELDA -->
-					<td>Independiente, 4pts - Lanus, 0pts</td>
+					<td><span>Independiente</span>, 4pts<br><span>Lanus</span>, 0pts</td>
 					<td>8</td>
-					<td>Talleres, 3pts - Velez, 3pts</td>
+					<td><span>Talleres</span>, 3pts<br><span>Velez, 3pts</span></td>
 				</tr>
+
 		</table>
 			
 

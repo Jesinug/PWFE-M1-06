@@ -84,6 +84,10 @@ La verion todavia mas simplificada (y que es la elegida) es:
 
 */
 }
+
+.noticia:last-child {
+	border: none
+}
 .noticia-img {
 	width: 30%
 }
@@ -116,4 +120,94 @@ footer {
 	color: #FFF;
 	font-size: 12px;
 	margin-top: 10px;
+}
+#tabla-posiciones table,
+#tabla-posiciones tr,
+#tabla-posiciones th,
+#tabla-posiciones td {
+	border: solid 1px #000
+}
+#tabla-posiciones table {
+	margin: auto; /* El margin auto hace q el programa distribuya proporcionalmente el espacio vacio de 
+	los costados, es decir, es una manera de centrar el bloque) */
+	width: 60%
+}
+#tabla-posiciones td, 
+#tabla-posiciones th {
+	padding: 15px;
+}
+#tabla-posiciones th {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 24px;
+}
+#tabla-posiciones td {
+	background-color: #D9D9D9;
+	vertical-align: middle; /* Vertical align es una propiedad q nos permite elegir la ubicacion vertical (en el eje Y) de un texto;
+								en este caso el valor middle lo ubicara en la mitad "del renglon" */
+}
+#tabla-posiciones tr {
+	 border-bottom: solid 1px #A1A1A1;
+}
+#tabla-posiciones td:nth-of-type(odd) { /* Odd e Even son valores que nos permite q CSS diferencie entre celdas pares e impare; sirve
+	cuando queremos estilizar determinadas celdas y otras no */
+	font-weight: 700;
+	text-align: center;
+	font-size: 24px;
+}
+#tabla-posiciones td:nth-of-type(even) span {
+	font-weight: 700;
+	color: darkblue;
+} 
+#tabla-posiciones tr:last-child {
+	border: none;
+}
+
+button {
+	display: none;
+}
+
+/******* ACA EMPIEZA LA MEDIA QUERY ********/
+
+@media screen and (max-width: 767px){   /* MEDIAS QUERY: Son areas construidas en el marco de CSS (se crea con un bloque encabezado por @media (seguido por el dispositivo con el q va a intarectuar esta area) y seguido por un and () {}
+donde aplicamos reglas q solo van a aplicar si la pantalla mide XSiginfica q estas reglas (estilos) se van a aplicar en pantallas de hasta cierto ancho, en este caso
+	una tablet de 7'). Es decir: este CSS se va a aplicar sólo si la pantalla mide 768px */
+	nav {
+		display: none;
+		float: none;
+		clear: both;
+	}
+
+	nav li {
+		display: block;
+		text-align: center;
+	}
+
+	.noticia {
+		flex-direction: column;	
+	}
+
+	.noticia-img,
+	.noticia-txt {
+		width: 100%;
+	}
+	button {
+		display: block;
+		padding: 5px;
+		border: none;
+		background-color: transparent;
+		color: #FFF;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1;
+		float: right;
+
+	}
+	button:focus + nav {
+		display: block;
+	}
+
+@media screen and (max-width: 575px){ /* <-- Hasta un smartphone de 6' */
+/****************/
 }
