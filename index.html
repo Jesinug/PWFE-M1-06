@@ -12,25 +12,68 @@
     </head>
     
     <body>
+    	<!--- Inicio Nav --->
+    	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		  <a class="navbar-brand h1 m-0" href="#">
+  		  <!--- El h1 hace la letra m[as gruesa, el m-0 es la manera en q le indico al bs q no quiero margen (ver en Spacing) ---> 
+    <img src="img/logo.png" class="d-inline-block align-top" alt="">DeporteXtremo</a>
+
+  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Menu" aria-controls="Menu" aria-expanded="false" aria-label="Toggle navigation"> 
+  	<!--- Los atributos DATA pueden ser data-target o data-toggle; son para asignar una accion, toggle indica el efecto q debe realizarse, target indica que elemento debe ser abierto --->
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+
+  	<div class="collapse navbar-collapse" id="Menu">
+    <ul class="navbar-nav ml-auto text-center text-lg-right"> <!--- Text-center es la indicacion de q el texto q integr la ul tiene q estar centrado --->
+      	<li class="nav-item active">
+        <a class="nav-link" href="#">Fútbol</a>
+      	</li>
+      	<li class="nav-item active">
+        <a class="nav-link" href="#">NBA</a>
+      	</li>
+      	<li class="nav-item active">
+        <a class="nav-link" href="#">Tenis</a>
+      	</li>
+      	<li class="nav-item active">
+        <a class="nav-link" href="#">Fórmula 1</a>
+      	</li>
+		<li class="nav-item active">
+        <a class="nav-link" href="#">Boxeo</a>
+      	</li>
+      	<li class="nav-item active">
+        <a class="nav-link" href="#">JJOO</a>
+      	</li>
+      	<li class="nav-item active">
+        <a class="nav-link" href="#">Moto GP</a>
+      	</li>       
+    </ul>
+    <!--- FORMULARIO QUE NO QUIERO USAR 
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> 
+    --->
+  </div>
+</nav>
+		<!--- Fin Nav --->
+
       <main>
     
       <section class="container-fluid" id="ultimas-noticias">
 
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-12">
+         <div class="col-12 col-sm-6 col-md-12">
       
           <!-- Noticia #1 -->
       <article class="row">
             <div class="col-12 col-md-3 col-lg-4">
-            <img src="img/sorteo-libertadores.jpg" class="img-fluid"> 
+            	<img src="img/sorteo-libertadores.jpg" class="img-fluid"> 
             </div>
-            <div class="col-12 col-md-9 col-lg-8">
-            </div>
-          <div class="col-12 col-md-9 col-lg-8">
-            <h3>La tecnología llega a la actual edición de la Libertadores</h3>
-            <p>por Joaquín Angeli</p>
-            <p>La Conmebol anunció la implementación el sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores</p>
-        </div>
+          	<div class="col-12 col-md-9 col-lg-8">
+            	<h3>La tecnología llega a la actual edición de la Libertadores</h3>
+            	<p>por Joaquín Angeli</p>
+            	<p>La Conmebol anunció la implementación el sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores</p>
+        	</div>
       </article>
       <!-- FIN Noticia #1 -->
       </div>
@@ -60,7 +103,7 @@
         <div class="col-12 col-md-9 col-lg-8">
           <h3>A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo</h3>
           <p>por Diego Di Marco</p>
-          <p>El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia</p>
+          <p>El 14/9/1923 el boxeador argentino enfrentó en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia</p>
         </div>
       </article>
       <!-- FIN Noticia #3 -->
