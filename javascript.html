@@ -1,0 +1,27 @@
+<!--- JS está pensado para ejecutarse el lado del navegador (client side) y es solo necesario el navegador para ejecutarlo--->
+<h1>Aprendiendo JavaScript</h1>
+<script>
+	// Se trata de un código, una secuencai de caracteres q js interpreta como un string o una cadena. Aparece como texto en recuadro en la pantalla como saludo
+// El recipiente se declara a la izquierda, y el valor asignado se pone de la derecha. Una linea de código con variables indica q la variable creada o convocada "vale" el valor q le asignamos.
+// Hay cuatro tipos primitivos de datos q todo lenguaje de programacion soporta:
+		// INTRODUCCION: La introducion de los datos, q incluye su correspondiente denominacion//
+		let nombre = prompt("Ingrese nombre:")
+		let stock = prompt("Ingrese stock:")
+		let precio = prompt("Ingrese precio:")
+		let disponible = confirm("Esta disponible?") // tant let como const son contrucciones creadas para asignarles algun valor. Const se usara para asignar un valor fijo, q no va a variar.
+		
+		// NUDO: Algo quiero hacer con el dato (aplicarle el iva, multiplicarlo por cinco, dividirlo)
+		let precioFinal = precio * 1.21
+
+		// alert( nombre )
+		// console.log( precio ) // comandos: utilizan sintaxis de puntos para designar lo q se pide q el sistema realice. En este caso, lo q ponemos entre parentesis aparece como texto en la consola.
+		
+
+		//document.write("Hay " + stock + " unidades de " + nombre + " que valen $" + precio " c/u") // Tambien es un comando. En este caso, lo q ponemos entre parentesis aparece como texto en la consola en el cuerpo de la página.
+	/* Se llama script q significa 'guion', porque se va a ejecutar de manera secuencial, siguiendo el orden definido por el programador. Si pasa algo en otro orden, y esto claramente es un error de sintaxis, lo q va a ocurrir es q el sistema se va a "romper" */
+	/* Errores: cuando tira undefined tenemos q buscar el error en algun punt de la variable */
+		// DESENLACE: Lo q quiero devolverle al usuario, una accion (se lo quiero mostrar al usuario en pantalla, lo quiero guardar como dato nuevo, lo quiero como reemplazo de un dato existente, etc)
+		
+		document.write(`<p>Hay ${stock} unidades de <strong>${nombre}</strong> que valen ARS ${precioFinal} c/u</p>`)
+
+</script>
