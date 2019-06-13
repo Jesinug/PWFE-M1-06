@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Kiosko "El JeviScript"</title>
+		<link rel="stylesheet" href="https://docs.google.com/uc?id=17C6A6tYbFc9esDbgo0Q-HjN2rNjvXbyc">
+	</head>
+	<body>
+		<h1>Kiosko <strong>El JeviScript</strong></h1>
+
+		<button>Nuevo Producto +</button>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Stock</th>
+					<th>Precio</th>
+					<th>Disponible</th>
+				</tr>
+			</thead>
+			<tbody id="productos">
+				<!-- ACÁ TIENEN QUE APARECER LOS PRODUCTOS -->
+			</tbody>
+		</table>
+
+		<script>
+				/* Cuado decimos q js tiene dos caras nos referimos a la cara q lo hace unico, y es su caracteristica de Manipulacion de DOM (Document Object Model). Esto se refiere a q es el mejor lector de html, tiene la capacidad para leer codigo html y hacer algo a partir de eso. Especificamente tres cosas, en cuya combinacion encontramos lo valioso del lenguaje*/
+				
+				// 1) Manipulacion de Contenido (puede leer el codigo html y modificar el interior del elemento)
+				// 2) Manipulacion de Estructura (puede leer el codigo html y modificar el exterior del elemento; esto ocurre cuando sumo atributos, la acumulacion de contenidos no es manipulacion de estructura, el reemplazo de contenidos si)
+				/*3) Manipulacion de Comportamiento (puede detectar comportamientos y activar condicionalmente otros comportamientos del codigo; estamos hablando de eventos q al ocurrir cambian el codigo, de los cuales la gran mayoria vienen del usuario) 		
+				*/
+			let titulo = document.querySelector("h1") // <--- Manipulacion Indirecta
+
+			titulo.onclick = cambiarTitulo
+			document.querySelector("button") .onclick = crearProducto // <--- Manipulacion Directa
+			function cambiarTitulo(){
+				titulo.innerHTML = "<u>Farmacia el TeScript</u>"
+				titulo.style.color = "red"
+				titulo.style.fontFamily = "Tahoma"
+				titulo.style.backgroundColor = "rgb(23,34,25)"
+				titulo.title = "El mejor precio en la Web"
+			}
+				/* Todos los atributos q conozco de html se convocan con un punto y el nombre del atributo en js */
+				/* Pero aunque js nos permita esto, y si bien es una caraceristica unica, estas dos primeras capacidades de manipular contenido y estructura no nos implicar una novedad, no nos lleva a un nuevo nivel. Lo q si lo genera es la combinacion de estas dos con una tercera.*/
+			function crearProducto(){
+				debugger
+				
+				// INTRODUCCION
+				let nombre = prompt("Ingrese nombre:")
+				let stock = prompt("Ingrese stock:")
+				let precio = prompt("Ingrese precio:")
+				let disponible = confirm("Esta disponible?") // tant let como const son contrucciones creadas para asignarles algun valor. Const se usara para asignar un valor fijo, q no va a variar.
+		
+				// NUDO
+				let precioFinal = precio * 1.21
+				
+				// DESENLACE
+				let fila = document.createElement("tr") // Si js puede capturar algo, lo puede crear
+
+				let celda1 = document.createElement("td")
+				let celda2 = document.createElement("td")
+				let celda3 = document.createElement("td")
+				let celda4 = document.createElement("td") 			 
+			
+				celda1.innerText = nombre
+				celda2.innerText = stock
+				celda3.innerText = precio
+				celda4.innerText = disponible
+
+				fila.appendChild(celda1)
+				fila.appendChild(celda2)
+				fila.appendChild(celda3)
+				fila.appendChild(celda4)
+
+				console.log(fila)	
+
+				document.querySelector("#productos").appendChild(fila)
+			}
+			
+
+		</script>
+	</body>
+</html>
+Contraer
+
