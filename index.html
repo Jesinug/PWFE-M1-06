@@ -121,8 +121,14 @@
   		// A CADA EVENTO (SEA PROVOCADO POR EL USUARIO O POR EL SERVIDOR) LE VOY A ASIGNAR UNA FUNCIÓN)
   		//Aca hay q hacer algo con el JSON//
   		if( ajax.status == 200 ){ //<--- Respuesta Exitosa!
-  		console.log( ajax.response )  		
+  		console.log("Antes del parseo")
+  		console.log( ajax.response )
+
+  		console.log("Despues del parseo")
+  		console.log( JSON.parse(ajax.response) )
+
   		}	
+  		
   		}
 
   		ajax.send()
