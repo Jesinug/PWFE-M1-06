@@ -112,35 +112,15 @@
   	<script>
   		//Aca voy a hacer magia
   		/* Manipulacion "masiva" del DOM */
-  		let links = document.querySelectorAll(".nav-link")
-
-  		let noticia1 = {
-  			imagen : "sorteo-libertadores.jpg",
-  			titulo : "La tecnología llega a la actual edición de la Libertadores",
-  			autor : "Joaquín Angeli",
-  			detalle : "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores."
+  		let links = document.querySelectorAll(".nav-link") // A CADA EVENTO (SEA PROVOCADO POR EL USUARIO O POR EL SERVIDOR) LE VOY A ASIGNAR UNA FUNCIÓN)
+  		let ajax = new XMLHttpRequest()
+  		ajax.open("GET", "noticias.json") //El ajax open sería el equivalente de escribir en una url, es decir q lo q pidamos a continuacion en sus terminos va a ser lo q quede expresado en la url. En el primer termino va el tipo de peticion q estoy solicitando. Hay dos tipos fundamentales: get (le pedimos al servidor q nos devuelva X archivo practicamente todas las peticiones q le hago al servidor son de este tipo) y post (del navegador queremos q salgan datos hacia el servidor). En el segundo termino va el archivo o bien la ruta q lleva al recurso q estoy pidiendo, es decir va lo q estoy pidiendo//
+  		ajax.onload = function(){ //<--- Funcion anonima//
   		}
+  		//Onload en el mundo js es un evento, pero en este caso es un evento q no realiza el usuario sino q es es propio de un componente del navegador//
+  		ajax.send()
 
-  		let noticia2 = {
-  			imagen : "tickets-rusia-mundial.jpg",
-  			titulo : "Comenzó la venta de entradas para el Mundial de Rusia 2018",
-  			autor : "Laura Smasnatta",
-  			detalle : "Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'"
-  		}
-
-  		let noticia3 = {
-  			imagen : "firpo.jpg",
-  			titulo : "A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo",
-  			autor : "por Diego Di Marco",
-  			detalle : "El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia."
-  		}
-
-  		let noticia4 = {
-  			imagen : "buenos-aires.jpg",
-  			titulo : "Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI",
-  			autor : "Melina Morales",
-  			detalle : "El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre."
-  		}
+  		// Que importante es el relevamiento de los datos y FUNDAMENTALMENTE el PARA QUE//
 
   		crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
   		crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
@@ -161,7 +141,8 @@
   			links[i].onclick = validarLink
   		}
 
-  		function validarLink(){
+  		function validarLink(){ //<--- Funcion nominada//
+  		//Aca hay q hacer algo con el JSON//	
 			confirm("Esta seguro que desea irse?")
   		}
 
@@ -183,7 +164,8 @@
 					              <p>por ${autor}</p>
 					              <p>${detalle}</p>
 					            </div>
-					         </article>`
+					         </article>
+					         `
 
 			noticia.innerHTML = contenido
 
@@ -192,8 +174,6 @@
   			document.querySelector("#ultimas-noticias .row").appendChild( noticia )
 
   		}
-
-
   	</script>
   </body>
 </html>
