@@ -112,12 +112,18 @@
   	<script>
   		//Aca voy a hacer magia
   		/* Manipulacion "masiva" del DOM */
-  		let links = document.querySelectorAll(".nav-link") // A CADA EVENTO (SEA PROVOCADO POR EL USUARIO O POR EL SERVIDOR) LE VOY A ASIGNAR UNA FUNCIÓN)
+  		let links = document.querySelectorAll(".nav-link")
   		let ajax = new XMLHttpRequest()
   		ajax.open("GET", "noticias.json") //El ajax open sería el equivalente de escribir en una url, es decir q lo q pidamos a continuacion en sus terminos va a ser lo q quede expresado en la url. En el primer termino va el tipo de peticion q estoy solicitando. Hay dos tipos fundamentales: get (le pedimos al servidor q nos devuelva X archivo practicamente todas las peticiones q le hago al servidor son de este tipo) y post (del navegador queremos q salgan datos hacia el servidor). En el segundo termino va el archivo o bien la ruta q lleva al recurso q estoy pidiendo, es decir va lo q estoy pidiendo//
   		ajax.onload = function(){ //<--- Funcion anonima//
+  		
+  		//Onload en el mundo js es un evento, pero en este caso es un evento q no realiza el usuario sino q es es propio de un componente del navegador
+  		// A CADA EVENTO (SEA PROVOCADO POR EL USUARIO O POR EL SERVIDOR) LE VOY A ASIGNAR UNA FUNCIÓN)
+  		//Aca hay q hacer algo con el JSON//
+  		if( ajax.status == 200 ){ ??//<--- Respuesta Exitosa!
+  		console.log( ajax.response )  		}	
   		}
-  		//Onload en el mundo js es un evento, pero en este caso es un evento q no realiza el usuario sino q es es propio de un componente del navegador//
+  		
   		ajax.send()
 
   		// Que importante es el relevamiento de los datos y FUNDAMENTALMENTE el PARA QUE//
