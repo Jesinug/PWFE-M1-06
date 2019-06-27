@@ -130,8 +130,7 @@
   		let noticias = JSON.parse(ajax.response)
 
   		noticias.forEach(function(noticia){  //<--- callback o llamadas de retorno; lo q pedimos q se haga luego de q se ejecuta una funcion; muchos callbacks usa los llamados parametros magicos, predefinidos taxativamente por el lenguaje. El callback asignado al forEach es un parametro q representa al item individual, q en en este caso seria la noticia.
-  		console.log("Aca va una noticia")
-  		console.log( noticia )
+  		crearNoticia(noticia.titulo, noticia.autor, noticia.detalle, noticia.imagen)
   		}) 
 
   		}	
@@ -142,10 +141,10 @@
 
   		// Que importante es el relevamiento de los datos y FUNDAMENTALMENTE el PARA QUE//
 
-  		crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
-  		crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
-  		crearNoticia(noticia3.titulo, noticia3.autor, noticia3.detalle, noticia3.imagen)
-  		crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
+  		//crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
+  		//crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
+  		//crearNoticia(noticia3.titulo, noticia3.autor, noticia3.detalle, noticia3.imagen)
+  		//crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
 
   		//Comportamiento
   		//links[0].onclick = validarLink
