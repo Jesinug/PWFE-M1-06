@@ -121,11 +121,18 @@
   		// A CADA EVENTO (SEA PROVOCADO POR EL USUARIO O POR EL SERVIDOR) LE VOY A ASIGNAR UNA FUNCIÓN)
   		//Aca hay q hacer algo con el JSON//
   		if( ajax.status == 200 ){ //<--- Respuesta Exitosa!
-  		console.log("Antes del parseo")
-  		console.log( ajax.response )
+  		//console.log("Antes del parseo")
+  		//console.log( ajax.response )
 
-  		console.log("Despues del parseo")
-  		console.log( JSON.parse(ajax.response) )
+  		//console.log("Despues del parseo")
+  		//console.log( JSON.parse(ajax.response) )
+
+  		let noticias = JSON.parse(ajax.response)
+
+  		noticias.forEach(function(noticia){  //<--- callback o llamadas de retorno; lo q pedimos q se haga luego de q se ejecuta una funcion; muchos callbacks usa los llamados parametros magicos, predefinidos taxativamente por el lenguaje. El callback asignado al forEach es un parametro q representa al item individual, q en en este caso seria la noticia.
+  		console.log("Aca va una noticia")
+  		console.log( noticia )
+  		}) 
 
   		}	
   		
