@@ -1,0 +1,25 @@
+{
+  "name": "pwfe-m1-06",
+  "version": "1.0.0",
+  "description": "index.js",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "^0.0.0",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesinug/PWFE-M1-06.git"
+  },
+  "author": "JN - Jesica Nugnez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesinug/PWFE-M1-06/issues"
+  },
+  "homepage": "https://github.com/Jesinug/PWFE-M1-06#readme"
+}
