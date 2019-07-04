@@ -2,6 +2,8 @@
 const http = require("http");
 const fs = require("fs");
 
+const port = process.env.PORT || 80
+
 http.createServer((request, response) => {
 		
 		let dir = "public/"; //declaro la carpeta en donde debe ir a buscar archivos
@@ -44,4 +46,4 @@ http.createServer((request, response) => {
 
 		});
 
-}).listen(80);
+}).listen(port);
